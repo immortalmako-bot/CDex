@@ -1,0 +1,26 @@
+{% extends 'Dex/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<!--Iniciar sesion-->
+      <div class="contenido">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <label for="username">Usuario</label>
+          <br>
+          <input type="text" name="username" placeholder="EL pepe" required>
+          <br>
+          <label for="password">Contraseña</label>
+          <br>
+          <input type="password" name="password" placeholder="1234567890" required>
+          <br>
+          <input type="submit" value="Iniciar">
+        </form>
+      </div>
+      <div id="login_api">
+        <a href="#">
+          <img src="{% static 'Dex/img/facebook-512.webp' %}" alt="logo google">Iniciar sesion con facebook
+        </a>
+      </div>
+{% endblock  %}

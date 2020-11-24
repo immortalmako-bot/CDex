@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/static/Dex/img/fondodepantalla.jpg');
+    display: grid;
+}
+
+header{
+    display: flex;
+    background-color: #530001;
+    width: 100%;
+    min-height: 40px;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+}
+
+header #titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #titulo img{
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+header #titulo h2{
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+
+header #enlaces a{
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+header #enlaces a:hover{
+    color: cyan;
+}
+
+#contenido_menu{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#contenido_menu #menu a{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+#contenido_menu #menu a:hover{
+    color: cyan;
+    border-bottom: 1px solid cyan;
+}
+
+@media screen and (max-width: 812px){
+    #contenido_menu{
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #contenido_menu #menu a{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 17px;
+        color: white;
+        padding: 5px;
+        padding-bottom: 1px;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+        margin-top: 20px;
+        padding-top: 16px;
+    }
+}
+
+main{
+    display: grid;
+    margin: 20px;
+    justify-content: center;
+    color: black;
+    flex-wrap: wrap;
+}
+
+/*
+footer{
+    background-color: black;
+    position: relative;
+    justify-self: last baseline;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p, footer strong{
+    margin: 2px 0;
+    color: white;
+}
+
+footer strong{
+    font-size: 20px;
+}
+*/

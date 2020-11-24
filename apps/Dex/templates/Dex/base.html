@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'Dex/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'Dex/css/contenido.css' %}">
+    <link rel="stylesheet" href="{% static 'Dex/css/formularios.css' %}">
+    <link rel="stylesheet" href="{% static 'Dex/css/mensajes.css' %}">
+    <link rel="stylesheet" href="{% static 'Dex/css/iniciarsesion.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Dex</title>
+  </head>
+  <body>
+    <!--CABEZERA-->
+    <header>
+      <div id="titulo">
+        <img src="{% static 'Dex/img/icono.ico' %}" alt="">
+        <h2>CDex</h2>
+      </div>
+      <div id="enlaces">
+        {% if request.user.is_authenticated %}
+          <a href="">{{user.username}}</a>
+          <a href="{% url 'cerrar_sesion' %}">Cerrar Sesion</a>
+        {% else %}
+          <a href="{% url 'inicio_sesion' %}">Iniciar Sesion</a>
+          <a href="{% url 'registro_usuario' %}">Registrase</a>
+        {% endif %}
+      </div>
+    </header>
+    <div id="contenido_menu">
+      <div id="menu">
+        <a href="{% url 'index' %}">Inicio</a>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'crear_criatura' %}">Crear Criatura</a>
+        <a href="#">Mi perfil</a>
+        <a href="{% url 'criaturas_usuario' %}">Mis criaturas</a>
+        {% endif %}
+        <a href="#">¿Que es CDEX?</a>
+      </div>
+    </div>
+    <!--MENSAJES-->
+    {% if messages %}
+    <div id="mensajes">
+      {% for i in messages %}
+      <p>
+        {{ i }}
+      </p>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <!--Contenido principal y dinamico-->
+    <main>
+      {% block contenido%}
+      {% endblock  %}
+    </main>
+  </body>
+</html>

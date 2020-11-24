@@ -1,0 +1,15 @@
+#mensajes{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(160, 25, 25);
+    max-width: 200px;
+    min-width: 200px;
+    margin: auto;
+    border: 1px solid red;
+    flex-wrap: wrap;
+    border-radius: 10px;
+} 
+
+#mensajes p{
+    color: white;
+}

@@ -1,0 +1,35 @@
+{% extends 'Dex/base.html' %}
+
+{% block contenido %}
+<!--CREAR UNA CRIATURA-->
+      <div class="contenido">
+        <form action="{% url 'formulario_criatura' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <label for="nombre">Nombre</label>
+          <br>
+          <input type="text" name="nombre" placeholder="Pepito">
+          <br>
+          <label for="edad">Edad</label>
+          <br>
+          <input type="number" name="edad" placeholder="21">
+          <br>
+          <label for="estatura">Estatura</label>
+          <br>
+          <input type="text" name="estatura" placeholder="1,60">
+          <br>
+          <label for="naturaleza">Naturaleza</label>
+          <br>
+          <input type="text" name="naturaleza" placeholder="Agresivo">
+          <br>
+          <label for="origen">Origen</label>
+          <br>
+          <textarea name="origen" id="" cols="30" rows="5" placeholder="La mama lo reto"></textarea>
+          <br>
+          <label for="avatar">Avatar</label>
+          <br>
+          <input type="file" name="avatar">
+          <br>
+          <input type="submit" value="Crear">
+        </form>
+      </div>
+{% endblock  %}

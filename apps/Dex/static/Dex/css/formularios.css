@@ -1,0 +1,40 @@
+form{
+    display: grid;
+    position: -ms-page;
+}
+
+form input[type='password'],
+form input[type='text'],
+form textarea
+{
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+form input[type='file']{
+    margin-bottom: 10px;
+    border: none;
+}
+
+form input[type='text']::placeholder,
+form input[type='password']::placeholder,
+form input[type='file']::placeholder,
+form textarea::placeholder
+{
+    color: rgb(50, 82, 83);
+}
+
+form input[type='submit']
+{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 16px;
+    margin-top: 20px;
+    max-width: 100px;
+    justify-self: center;
+    border: none;
+    border: 1px solid black;
+    padding: 5px 26px;
+    background-color: #530001;
+    color: white;
+}

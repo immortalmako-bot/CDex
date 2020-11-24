@@ -1,0 +1,53 @@
+ main .contenido{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 5px;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    margin: 10px;
+    
+}
+
+main .contenido a{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+}
+
+main .contenido a:hover{
+    color: cyan;
+}
+
+main .contenido .contenido_superior{
+    display: flex;
+}
+
+
+main .contenido .contenido_superior img{
+    border-right: 1px solid black;
+    max-width: 90px;
+    margin-right: 5px;
+}
+
+main .contenido .contenido_inferior{
+    margin-top: 5px;
+    max-width: 260px;
+}
+
+main .contenido .contenido_superior #datos p{
+    border-bottom: 1px solid black;
+}
+
+main .contenido .contenido_inferior strong{
+    margin-top: 5px;
+    border-bottom: 1px solid black;
+}
+
+main .contenido .contenido_inferior p{
+    margin-top: 5px;
+}

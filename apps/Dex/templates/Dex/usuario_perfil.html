@@ -1,0 +1,29 @@
+{% extends 'Dex/base.html' %}
+
+{% block  %}
+    {% if all %}
+      {% for i in all %}
+        <div class="contenido">
+          <a href="#">{{i.nombre}}</a>
+          <div class="contenido_superior">
+            <img src="/media/{{i.imagen}}" alt="">
+            <div id="datos">
+              <p>Edad: {{i.edad}}</p>
+              <p>Estatura: {{i.estatura}}</p>
+              <p>Naturaleza: {{i.naturaleza}}</p>
+              <p>autor: {{i.usuario.username}}</p>
+            </div>
+          </div>
+          <div class="contenido_inferior">
+            <strong>Origen</strong>
+            <br>
+            <p>{{i.origen}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="contenido">
+        <p>No has creato ninguna criatura</p>
+      </div>
+    {% endif %}
+{% endblock  %}

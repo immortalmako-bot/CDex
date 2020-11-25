@@ -7,7 +7,7 @@
     {% if all %}
       {% for i in all %}
         <div class="contenido">
-          <a href="#">{{i.nombre}}</a>
+          <a href="{% url 'publicaciones' i.id %}">{{i.nombre}} {{i.id}}</a>
           <div class="contenido_superior">
             <img src="/media/{{i.imagen}}" alt="">
             <div id="datos">

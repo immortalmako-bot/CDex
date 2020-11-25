@@ -9,6 +9,11 @@ def inicio(request):
     return render(request, 'Dex/ver_criaturas.html', {'all':all})
 
 
+def publicacion(request, id):
+    criatura = Criatura.objects.filter(id=id)
+    return render(request, 'Dex/publicacion.html', {'all': criatura})
+
+
 def criaturas_usuario(request):
     criaturas = Criatura.objects.filter(usuario=request.user.id)
     return render(request, 'Dex/ver_criaturas.html', {'all': criaturas})

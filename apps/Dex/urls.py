@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView
 from .views import (inicio, crear_criatura, formulario_criatura, criaturas_usuario,
-                    registro_usuario, formulario_registro_usuario)
+                    registro_usuario, formulario_registro_usuario, publicacion)
 
 
 urlpatterns = [
@@ -16,6 +16,7 @@ urlpatterns = [
     path('criaturas_usuario/', login_required(criaturas_usuario), name='criaturas_usuario'),
     path('registro/', registro_usuario, name='registro_usuario'),
     path('form_registro/', formulario_registro_usuario, name='formulario_registro_usuario'),
+    path('publicacion/<id>', publicacion, name='publicaciones'),
     path('oauth/', include('social_django.urls', namespace='social')),
 ]
 

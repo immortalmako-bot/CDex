@@ -1,0 +1,12 @@
+main .contenido_publicacion{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 5px;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    margin: 10px;
+  
+}

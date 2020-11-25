@@ -95,7 +95,7 @@ header #enlaces a:hover{
 }
 
 main{
-    display: grid;
+    display: flex;
     margin: 20px;
     justify-content: center;
     color: black;

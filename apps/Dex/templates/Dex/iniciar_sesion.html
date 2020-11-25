@@ -4,6 +4,7 @@
 
 {% block contenido %}
 <!--Iniciar sesion-->
+    <div id="contenido_login">
       <div class="contenido">
         <form action="" method="POST">
           {% csrf_token %}
@@ -19,8 +20,9 @@
         </form>
       </div>
       <div id="login_api">
-        <a href="#">
+        <a href="{% url 'social:begin' 'facebook' %}">
           <img src="{% static 'Dex/img/facebook-512.webp' %}" alt="logo google">Iniciar sesion con facebook
         </a>
       </div>
+    </div>
 {% endblock  %}

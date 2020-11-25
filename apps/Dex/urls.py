@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.decorators import login_required
@@ -16,7 +16,7 @@ urlpatterns = [
     path('criaturas_usuario/', login_required(criaturas_usuario), name='criaturas_usuario'),
     path('registro/', registro_usuario, name='registro_usuario'),
     path('form_registro/', formulario_registro_usuario, name='formulario_registro_usuario'),
-    
+    path('oauth/', include('social_django.urls', namespace='social')),
 ]
 
 if settings.DEBUG:
